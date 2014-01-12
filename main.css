@@ -255,8 +255,6 @@ applet
 
 .projectIcon:hover
 {
-	width: 396px;
-	height: 396px;
-	top: -100px;
-	left:-100px;
+	width: 250px;
+	height: 250px;
 }
