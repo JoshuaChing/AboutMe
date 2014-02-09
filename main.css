@@ -58,8 +58,8 @@ html
  .navigation:hover
 {
 	background-color:#5f6975;
-	font-size: 20px;
-	color:blue;
+	//font-size: 20px;
+	color:#7ACDF0;
 }
 
 #title
@@ -169,7 +169,7 @@ applet
 	float: right;
 	font-size:20px;
 	text-decoration: none;
-	color:blue;
+	color:black;
 	border: 1px solid black;
 }
 
@@ -227,7 +227,7 @@ applet
 
 .projectIconFrame
 {
-	color:blue;
+	color:black;
 	background-color: #AECDDA;
 	text-align: center;
 	text-decoration: none;
@@ -246,10 +246,10 @@ applet
 	width:194px;
 	height:194px;
 	-webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-     transition: all 1s ease;
+    	-moz-transition: all 1s ease;
+    	-o-transition: all 1s ease;
+    	-ms-transition: all 1s ease;
+    	 transition: all 1s ease;
 	 position:relative;
 }
 
