@@ -1,4 +1,4 @@
-JoshuaChingWebsite
+About Me
 ==================
 
 This website was created from scratch as a tool to pratice html and css.
