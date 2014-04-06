@@ -1,9 +1,7 @@
 About Me
 ==================
 
-This website was created from scratch as a tool to pratice html and css.
-However it does display information about myself and projects I have participated in.
+This is my personal website responsively designed and developed during the train rides home from my first co-op job.
+(It is still under construction!)
 
-https://db.tt/DNIZsc0N
-
-The link above will allow you to see the website online.
+Enjoy!
