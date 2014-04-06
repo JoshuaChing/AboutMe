@@ -1,0 +1,192 @@
+html{
+	background-color:#ecf0f1;
+	font-family:Verdana;
+}
+
+body{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+#header{
+	background-color:#42a1d9;
+	height:32px;
+	width:100%;
+	position:fixed;
+	top:0%;
+	left:0%;
+	z-index: 1;
+	margin:0;
+	padding:0;
+}
+
+#footer{
+	font-size:12px;
+	background-color:#bdc3c7;
+	padding:20px;
+	margin-top:80px;
+}
+
+.contentDivider{
+	height:10px;
+	background: url(../img/contentDivider25x5.png) no-repeat scroll center;
+	clear:both;
+	width:100%;
+	margin-top:80px;
+	margin-bottom:80px;
+}
+
+.contentDivider hr{
+	display:none;
+}
+
+/*NAVIGATION MENU*/
+
+/*main nav*/
+nav{
+	position:fixed;
+	top:0%;
+	right:0%;
+	z-index: 2;
+}
+
+nav ul{
+	margin:0;
+	padding:0;
+}
+
+/*all list items*/
+nav ul li{
+	width:75px;
+	float:left;
+	list-style: none;
+	padding-top:5px;
+	padding-bottom:5px
+}
+
+/*all list item links*/
+nav ul li a{
+	text-decoration:none;
+	font-size: 12px;
+	color:#FFF;
+}
+
+/*all list item links hover*/
+nav ul li a:hover{
+	text-decoration:underline;
+}
+
+/*hide child items*/
+nav li ul{
+	display:none;
+	padding-top:5px;
+}
+
+/*display child item when hovered*/
+nav li:hover ul{
+	display:block;
+}
+
+/*child item link style*/
+nav ul li ul li a{
+	color:#7f8c8d;
+}
+
+/*child item links style hover*/
+nav ul li ul li a:hover{
+	color:#000;
+}
+
+/*BANNER*/
+
+#bannerContainer{
+	width:100%;
+	height:460px;
+	background:url("../img/WasagaBanner.png") no-repeat center top;
+	background-size:cover;
+	margin-bottom:60px;
+}
+
+#bannerBlock{
+	top:35%;
+	position:relative;
+}
+
+#bannerName{
+	font-size:50px;
+}
+
+#bannerPosition{
+	font-size:20px;
+}
+
+#bannerLogo{
+	vertical-align: text-bottom;
+	margin-right:10px;
+}
+
+/*MORE LINKS*/
+
+#moreLinksContainer{
+	width:50%;
+	padding-top:80px;
+	margin: 0 auto;
+	display:inline-block;
+}
+
+.moreLinksBlock{
+	width:33.33333333333333333333333%;
+	float:left;
+}
+
+.moreLinksStyle{
+	text-decoration: none;
+	font-weight:bold;
+	font-size:12px;
+	color:#000;
+}
+
+.moreLinksStyle:hover{
+	text-decoration:underline;
+}
+
+/*CONTENT*/
+h3{
+	font-weight:normal;
+	font-size:20px;
+}
+p{
+	width:50%;
+	margin:10px auto;
+	text-align:left;
+	font-size:14px;
+}
+
+/*MOBILE STYLES*/
+
+@media only screen and (max-width: 480px) {
+	#bannerName{
+		font-size:35px;
+	}
+	#bannerPosition{
+		font-size:18px;
+	}
+	#bannerLogo{
+		width:30px;
+		height:30px;
+	}
+	#moreLinksContainer{
+		width:75%;
+	}
+	h3{
+		font-size:18px;
+	}
+
+}
+
+/*colors
+	turquoise:#00d0af;
+	blue:#42a1d9;
+	lightlightlightgray:#f4f7f7;
+*/
