@@ -25,7 +25,7 @@ body{
 	font-size:12px;
 	background-color:#bdc3c7;
 	padding:20px;
-	margin-top:80px;
+	margin-top:40px;
 }
 
 .contentDivider{
@@ -33,8 +33,8 @@ body{
 	background: url(../img/contentDivider25x5.png) no-repeat scroll center;
 	clear:both;
 	width:100%;
-	margin-top:80px;
-	margin-bottom:80px;
+	margin-top:40px;
+	margin-bottom:40px;
 }
 
 .contentDivider hr{
@@ -105,7 +105,6 @@ nav ul li ul li a:hover{
 	height:460px;
 	background:url("../img/WasagaBanner.png") no-repeat center top;
 	background-size:cover;
-	margin-bottom:60px;
 }
 
 #bannerBlock{
@@ -151,16 +150,19 @@ nav ul li ul li a:hover{
 	text-decoration:underline;
 }
 
+/*GRAPHS*/
+
+.graphsBlock{
+	width:29.3333333333%;
+	margin:2%;
+	background-color:#42a1d9;
+	float:left;
+}
+
 /*CONTENT*/
 h3{
 	font-weight:normal;
-	font-size:20px;
-}
-p{
-	width:50%;
-	margin:10px auto;
-	text-align:left;
-	font-size:14px;
+	font-size:16px;
 }
 
 /*MOBILE STYLES*/
@@ -180,10 +182,27 @@ p{
 		width:75%;
 	}
 	h3{
-		font-size:18px;
+		font-size:14px;
 	}
 
 }
+
+/*TEMPORARY
+@media only screen and (max-width:320px){
+	#bannerName{
+		font-size:30px;
+	}
+	#bannerPosition{
+		font-size:16px;
+	}
+	#bannerLogo{
+		width:28px;
+		height:28px;
+	}
+	#moreLinksContainer{
+		width:90%;
+	}
+}*/
 
 /*colors
 	turquoise:#00d0af;

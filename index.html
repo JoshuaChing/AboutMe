@@ -4,17 +4,19 @@
 		<title>Joshua Ching</title>
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.0.3/css/font-awesome.min.css">
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="header">
 			<nav>
 				<ul>
 					<li>
-						<a href="#about">About</a>
+						<a href="#">Home</a>
 						<ul>
-							<li><a href="#experience">Experience</a></li>
-							<li><a href="#education">Education</a></li>
-							<li><a href="#skills">Skills</a></li>
+							<li><a href="#">Experience</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">Skills</a></li>
 						</ul>
 					</li>
 					<li>
@@ -38,47 +40,41 @@
 
 				<div id="moreLinksContainer">
 					<div class="moreLinksBlock">
+						<i class="fa fa-envelope"></i>
 						<a class="moreLinksStyle" href="#">Email</a>
 					</div>
 					<div class="moreLinksBlock">
+						<i class="fa fa-github-alt"></i>
 						<a class="moreLinksStyle" href="https://github.com/JoshuaChing" target="_blank">GitHub</a>
 					</div>
 					<div class="moreLinksBlock">
+						<i class="fa fa-linkedin-square"></i>
 						<a class="moreLinksStyle" href="http://www.linkedin.com/pub/joshua-ching/68/116/b28" target="_blank">LinkedIn</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<h3 id="about">About Me</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla quam risus. Donec tincidunt mi ipsum, quis convallis metus tempus eget. Suspendisse nec nisi at leo suscipit mattis eget vulputate diam. Etiam tempus eget nibh sit amet faucibus. Vivamus at imperdiet dui, ac gravida ipsum. Donec nec nulla sed ligula bibendum molestie.
-		</p>
+		<div id="graphsContainer">
+			<div id="graph1" class="graphsBlock">
+				<h3>What I like</h3>
+				<script src="js/graph1.js"></script>
+			</div>
+			<div class="graphsBlock">
+				<h3>What I know</h3>
+			</div>
+			<div class="graphsBlock">
+				<h3>What...</h3>
+			</div>
+		</div>
 
 		<div class="contentDivider"><hr></div>
-
-		<h3 id="experience">Experience</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla quam risus. Donec tincidunt mi ipsum, quis convallis metus tempus eget. Suspendisse nec nisi at leo suscipit mattis eget vulputate diam. Etiam tempus eget nibh sit amet faucibus. Vivamus at imperdiet dui, ac gravida ipsum. Donec nec nulla sed ligula bibendum molestie.
-		</p>
-
-		<div class="contentDivider"><hr></div>
-
-		<h3 id="education">Education</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla quam risus. Donec tincidunt mi ipsum, quis convallis metus tempus eget. Suspendisse nec nisi at leo suscipit mattis eget vulputate diam. Etiam tempus eget nibh sit amet faucibus. Vivamus at imperdiet dui, ac gravida ipsum. Donec nec nulla sed ligula bibendum molestie.
-		</p>
-
-		<div class="contentDivider"><hr></div>
-
-		<h3 id="skills">Skills</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla quam risus. Donec tincidunt mi ipsum, quis convallis metus tempus eget. Suspendisse nec nisi at leo suscipit mattis eget vulputate diam. Etiam tempus eget nibh sit amet faucibus. Vivamus at imperdiet dui, ac gravida ipsum. Donec nec nulla sed ligula bibendum molestie.
-		</p>
 
 		<div id="footer">
-			Designed on the train I took to go home from my first co-op job.
+			Designed with <i class="fa fa-heart"></i> on the train I took <i class="fa fa-home fa-lg"></i> from my first co-op job.
 		</div>
+
+
 
 	</body>
 </html>
