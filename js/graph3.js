@@ -4,7 +4,7 @@ var height = 200;
 
 var scale = d3.scale.linear().domain([0,100]).range([0, 2*Math.PI]);
 
-var vis = d3.select("#svg_graph1")
+var vis = d3.select("#svg_graph3")
 	.style("background-color","#FFF")
 	.style("width",width + "px")
 	.style("height",height + "px");
