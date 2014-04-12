@@ -1,5 +1,5 @@
 html{
-	background-color:#ecf0f1;
+	background-color:#f4f7f7;;
 	font-family:Verdana;
 }
 
@@ -24,8 +24,7 @@ body{
 #footer{
 	font-size:12px;
 	background-color:#bdc3c7;
-	padding:20px;
-	margin-top:40px;
+	padding:20px;	
 }
 
 .contentDivider{
@@ -39,6 +38,10 @@ body{
 
 .contentDivider hr{
 	display:none;
+}
+
+.clear{
+	clear:both;
 }
 
 /*NAVIGATION MENU*/
@@ -150,19 +153,18 @@ nav ul li ul li a:hover{
 	text-decoration:underline;
 }
 
-/*GRAPHS*/
-
-.graphsBlock{
-	width:29.3333333333%;
-	margin:2%;
-	background-color:#42a1d9;
-	float:left;
+/*GRAPH AND CONTENT CONTAINER*/
+#container{
+	width:960px;
+	margin:32px auto 32px auto;
+	background-color:#FFF;
+	display:inline-block;
 }
 
-/*CONTENT*/
-h3{
-	font-weight:normal;
-	font-size:16px;
+#graph_buttons{
+	width:460px;
+	padding:10px;
+	float:right;
 }
 
 /*MOBILE STYLES*/
@@ -186,23 +188,6 @@ h3{
 	}
 
 }
-
-/*TEMPORARY
-@media only screen and (max-width:320px){
-	#bannerName{
-		font-size:30px;
-	}
-	#bannerPosition{
-		font-size:16px;
-	}
-	#bannerLogo{
-		width:28px;
-		height:28px;
-	}
-	#moreLinksContainer{
-		width:90%;
-	}
-}*/
 
 /*colors
 	turquoise:#00d0af;

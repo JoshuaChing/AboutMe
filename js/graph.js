@@ -33,6 +33,14 @@ var path = vis.selectAll("path")
 			.style("stroke-width","3px")
 			.each(function(d) { this._current = d; }); // store the initial angles;
 
+//draw initial center label
+var label = vis.append("text")
+	.attr("transform","translate(" + width/2 + "," + height/2 + ")")
+	.attr("text-anchor","middle")
+	.text(about.label)
+	.style("font-family","verdana")
+	.style("font-size","16px");
+
 //button function calls on click
 $(document).ready(function(){
 	$("#aboutButton").click(function(){
@@ -54,6 +62,9 @@ function updateGraph(dataObject){
 		.ease("bounce")
 		.duration(750)
 		.attrTween("d", arcTween);
+
+	//update center label
+	label.text(dataObject.label);
 
 	//for testing only
 	console.log(dataObject);
