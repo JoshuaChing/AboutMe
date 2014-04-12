@@ -1,27 +1,53 @@
-var data = [[0,50,"#e67e22"],[50,75,"#f1c40f"],[75,100,"#e74c3c"]];
-var radius = 240;
+var about = {label: "About", dataset: [10,20,30,40]},
+	skills = {label: "Skills", dataset: [10,10,10]},
+	education = {label: "Education", dataset:[2,12]}
 
-var scale = d3.scale.linear().domain([0,100]).range([0, 2*Math.PI]);
+var width=480;
+var height=480;
+var radius = Math.min(width, height) / 2;
 
-var vis = d3.select("#svg_graph")
-	.style("background-color","#FFF")
-	.style("width",radius*2 + "px")
-	.style("height",radius*2 + "px")
-	.style("float","left");
+var color = d3.scale.category20();
+
+var pie = d3.layout.pie()
+			.sort(null);
 
 var arc = d3.svg.arc()
-	.innerRadius((radius)-60)
-	.outerRadius((radius)-10)
-	.startAngle(function(d){return scale(d[0]);})
-	.endAngle(function(d){return scale(d[1]);});
+	.innerRadius(radius-80)
+	.outerRadius(radius-10);
 
-vis.selectAll("path")
-	.data(data)
-	.enter()
-	.append("path")
-	.attr("d",arc)
-	.style("fill",function(d){return d[2];})
-	.style("stroke","#FFF")
-	.style("stroke-width","3px")
-	.attr("transform","translate(240,240)");
+//set up svg space
+var vis = d3.select("#svg_graph")
+	.style("width",width)
+	.style("height", height)
+	.style("float","left");
 
+//draw donut path
+var path = vis.selectAll("path")
+			.data(pie(about.dataset))
+			.enter()
+			.append("path")
+			.attr("d",arc)
+			.attr("transform","translate(" + width/2 + "," + height/2 + ")")
+			.style("fill", function(d, i){return color(i);})
+			.style("stroke","#FFF")
+			.style("stroke-width","3px");
+
+//button function calls on click
+$(document).ready(function(){
+	$("#aboutButton").click(function(){
+		updateGraph(about.dataset);
+	});
+	$("#skillsButton").click(function(){
+		updateGraph(skills.dataset);
+	});
+	$("#educationButton").click(function(){
+		updateGraph(education.dataset);
+	});
+});
+
+//update graph function
+function updateGraph(dataObject){
+	path.data(pie(dataObject))
+		.attr("d",arc);
+	console.log(dataObject);
+}

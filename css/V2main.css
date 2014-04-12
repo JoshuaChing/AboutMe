@@ -1,5 +1,5 @@
 html{
-	background-color:#FFF;
+	background-color:#f4f7f7;;
 	font-family:Verdana;
 }
 
@@ -104,9 +104,15 @@ nav ul li ul li a:hover{
 /*MAIN CONTAINER*/
 #container{
 	width:960px;
-	margin:32px auto 0 auto;
-	background-color:#000;
+	margin:64px auto 32px auto;
+	background-color:#FFF;
 	display:inline-block;
+}
+
+#graph_buttons{
+	width:460px;
+	padding:10px;
+	float:right;
 }
 
 /*MOBILE STYLES*/
