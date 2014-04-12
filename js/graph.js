@@ -1,19 +1,20 @@
 var about = {label: "About", dataset: [10,20,30,40]},
-	skills = {label: "Skills", dataset: [10,10,10,0]},
-	education = {label: "Education", dataset:[2,12,0,0]}
+	education = {label: "Education", dataset:[2,12,0,0]},
+	experience = {label: "Experience", dataset:[1,0,0,0]},
+	skills = {label: "Skills", dataset: [10,10,10,0]};
 
-var width=480;
-var height=480;
+var width=460;
+var height=460;
 var radius = Math.min(width, height) / 2;
 
-var color = d3.scale.category20();
+var color = d3.scale.category20c();
 
 var pie = d3.layout.pie()
 			.sort(null);
 
 var arc = d3.svg.arc()
 	.innerRadius(radius-80)
-	.outerRadius(radius-10);
+	.outerRadius(radius-20);
 
 //set up svg space
 var vis = d3.select("#svg_graph")
@@ -37,20 +38,25 @@ var path = vis.selectAll("path")
 var label = vis.append("text")
 	.attr("transform","translate(" + width/2 + "," + height/2 + ")")
 	.attr("text-anchor","middle")
-	.text(about.label)
-	.style("font-family","verdana")
-	.style("font-size","16px");
+	.text(about.label);
 
 //button function calls on click
 $(document).ready(function(){
 	$("#aboutButton").click(function(){
 		updateGraph(about);
-	});
-	$("#skillsButton").click(function(){
-		updateGraph(skills);
+		updateContentTitle("About Me");
 	});
 	$("#educationButton").click(function(){
 		updateGraph(education);
+		updateContentTitle("Education")
+	});
+	$("#experienceButton").click(function(){
+		updateGraph(experience);
+		updateContentTitle("Experience")
+	});
+	$("#skillsButton").click(function(){
+		updateGraph(skills);
+		updateContentTitle("Hard Skills")
 	});
 });
 
@@ -78,4 +84,9 @@ function arcTween(a) {
     return function(t) {
         return arc(i(t));
     };
+}
+
+//update content title
+function updateContentTitle(newContentTitle){
+	$("#contentTitle").text(newContentTitle);
 }
