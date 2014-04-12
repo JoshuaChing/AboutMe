@@ -1,6 +1,6 @@
 var about = {label: "About", dataset: [10,20,30,40]},
-	skills = {label: "Skills", dataset: [10,10,10]},
-	education = {label: "Education", dataset:[2,12]}
+	skills = {label: "Skills", dataset: [10,10,10,0]},
+	education = {label: "Education", dataset:[2,12,0,0]}
 
 var width=480;
 var height=480;
@@ -21,7 +21,7 @@ var vis = d3.select("#svg_graph")
 	.style("height", height)
 	.style("float","left");
 
-//draw donut path
+//draw initial donut path
 var path = vis.selectAll("path")
 			.data(pie(about.dataset))
 			.enter()
@@ -30,24 +30,41 @@ var path = vis.selectAll("path")
 			.attr("transform","translate(" + width/2 + "," + height/2 + ")")
 			.style("fill", function(d, i){return color(i);})
 			.style("stroke","#FFF")
-			.style("stroke-width","3px");
+			.style("stroke-width","3px")
+			.each(function(d) { this._current = d; }); // store the initial angles;
 
 //button function calls on click
 $(document).ready(function(){
 	$("#aboutButton").click(function(){
-		updateGraph(about.dataset);
+		updateGraph(about);
 	});
 	$("#skillsButton").click(function(){
-		updateGraph(skills.dataset);
+		updateGraph(skills);
 	});
 	$("#educationButton").click(function(){
-		updateGraph(education.dataset);
+		updateGraph(education);
 	});
 });
 
 //update graph function
 function updateGraph(dataObject){
-	path.data(pie(dataObject))
-		.attr("d",arc);
+	//update paths
+	path.data(pie(dataObject.dataset))
+		.transition()
+		.ease("bounce")
+		.duration(750)
+		.attrTween("d", arcTween);
+
+	//for testing only
 	console.log(dataObject);
+}
+
+// Store the currently-displayed angles in this._current.
+// Then, interpolate from this._current to the new angles.
+function arcTween(a) {
+    var i = d3.interpolate(this._current, a);
+    this._current = i(0);
+    return function(t) {
+        return arc(i(t));
+    };
 }
