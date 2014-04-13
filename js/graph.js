@@ -28,8 +28,8 @@ var arc = d3.svg.arc()
 
 //set up svg space
 var vis = d3.select("#svg_graph")
-	.style("width",width)
-	.style("height", height)
+	.style("width",width+"px")
+	.style("height", height+"px")
 
 //draw initial donut path
 var path = vis.selectAll("path")
@@ -79,8 +79,8 @@ $(document).ready(function(){
 			height = 460;
 		}
 		//resize svg space
-		vis.style("width",width)
-			.style("height", height);
+		vis.style("width",width +"px")
+			.style("height", height +"px");
 		//resize radius size
 		radius = Math.min(width, height) / 2;
 		arc.innerRadius(radius-70)

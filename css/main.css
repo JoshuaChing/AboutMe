@@ -1,6 +1,7 @@
 html{
 	background-color:#f4f7f7;;
 	font-family:Verdana;
+	min-width:320px;
 }
 
 body{
