@@ -3,6 +3,8 @@ var about = {label: "About", dataset: [10,20,30,40]},
 	experience = {label: "Experience", dataset:[1,0,0,0]},
 	skills = {label: "Skills", dataset: [10,10,10,0]};
 
+var contentDisplayed = "about";
+
 var width;
 var height;
 
@@ -54,18 +56,22 @@ $(document).ready(function(){
 	$("#aboutButton").click(function(){
 		updateGraph(about);
 		updateContentTitle("About Me");
+		updateInnerContent("about");
 	});
 	$("#educationButton").click(function(){
 		updateGraph(education);
-		updateContentTitle("Education")
+		updateContentTitle("Education");
+		updateInnerContent("education");
 	});
 	$("#experienceButton").click(function(){
 		updateGraph(experience);
-		updateContentTitle("Experience")
+		updateContentTitle("Experience");
+		updateInnerContent("experience");
 	});
 	$("#skillsButton").click(function(){
 		updateGraph(skills);
 		updateContentTitle("Hard Skills")
+		updateInnerContent("skills");
 	});
 
 	//check if window size change
@@ -119,4 +125,13 @@ function arcTween(a) {
 //update content title
 function updateContentTitle(newContentTitle){
 	$("#contentTitle").text(newContentTitle);
+}
+
+//update inner content
+function updateInnerContent(newContentDisplayed){
+	if (contentDisplayed!=newContentDisplayed){
+		$("#"+contentDisplayed+"Content").hide();
+		$("#"+newContentDisplayed+"Content").fadeIn();
+		contentDisplayed = newContentDisplayed;
+	}
 }
