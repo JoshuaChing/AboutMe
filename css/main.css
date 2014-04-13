@@ -168,6 +168,14 @@ nav ul li ul li a:hover{
 	width:100%;
 }
 
+#svg_graph{
+	float:left;
+}
+
+#contentOuterContainer{
+	padding:0 10px 10px 10px;
+}
+
 #contentInnerContainer{
 	text-align:left;
 }
@@ -187,6 +195,9 @@ nav ul li ul li a:hover{
 	}
 	#moreLinksContainer{
 		width:100%;
+	}
+	#svg_graph{
+		float:none;
 	}
 }
 

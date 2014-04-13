@@ -3,8 +3,18 @@ var about = {label: "About", dataset: [10,20,30,40]},
 	experience = {label: "Experience", dataset:[1,0,0,0]},
 	skills = {label: "Skills", dataset: [10,10,10,0]};
 
-var width=460;
-var height=460;
+var width;
+var height;
+
+if ($(window).width() > 480){
+	width = 480;
+	height = 480;
+}
+else{
+	width = 320;
+	height = 320;
+}
+
 var radius = Math.min(width, height) / 2;
 
 var color = d3.scale.category20c();
@@ -20,7 +30,6 @@ var arc = d3.svg.arc()
 var vis = d3.select("#svg_graph")
 	.style("width",width)
 	.style("height", height)
-	.style("float","left");
 
 //draw initial donut path
 var path = vis.selectAll("path")
@@ -40,8 +49,8 @@ var label = vis.append("text")
 	.attr("text-anchor","middle")
 	.text(about.label);
 
-//button function calls on click
 $(document).ready(function(){
+	//button function calls on click
 	$("#aboutButton").click(function(){
 		updateGraph(about);
 		updateContentTitle("About Me");
@@ -58,6 +67,30 @@ $(document).ready(function(){
 		updateGraph(skills);
 		updateContentTitle("Hard Skills")
 	});
+
+	//check if window size change
+	$(window).resize(function(){
+		if (window.innerWidth<=480){
+			width = 320;
+			height = 320;
+		}
+		else{
+			width = 480;
+			height = 480;
+		}
+		//resize svg space
+		vis.style("width",width)
+			.style("height", height);
+		//resize radius size
+		radius = Math.min(width, height) / 2;
+		arc.innerRadius(radius-80)
+			.outerRadius(radius-20);
+		//redraw path
+		path.attr("d", arc)
+			.attr("transform","translate(" + width/2 + "," + height/2 + ")");
+		//redraw label
+		label.attr("transform","translate(" + width/2 + "," + height/2 + ")")
+	});
 });
 
 //update graph function
@@ -71,9 +104,6 @@ function updateGraph(dataObject){
 
 	//update center label
 	label.text(dataObject.label);
-
-	//for testing only
-	console.log(dataObject);
 }
 
 // Store the currently-displayed angles in this._current.
