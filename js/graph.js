@@ -7,8 +7,8 @@ var width;
 var height;
 
 if ($(window).width() > 480){
-	width = 480;
-	height = 480;
+	width = 460;
+	height = 460;
 }
 else{
 	width = 320;
@@ -23,8 +23,8 @@ var pie = d3.layout.pie()
 			.sort(null);
 
 var arc = d3.svg.arc()
-	.innerRadius(radius-80)
-	.outerRadius(radius-20);
+	.innerRadius(radius-70)
+	.outerRadius(radius-10);
 
 //set up svg space
 var vis = d3.select("#svg_graph")
@@ -75,16 +75,16 @@ $(document).ready(function(){
 			height = 320;
 		}
 		else{
-			width = 480;
-			height = 480;
+			width = 460;
+			height = 460;
 		}
 		//resize svg space
 		vis.style("width",width)
 			.style("height", height);
 		//resize radius size
 		radius = Math.min(width, height) / 2;
-		arc.innerRadius(radius-80)
-			.outerRadius(radius-20);
+		arc.innerRadius(radius-70)
+			.outerRadius(radius-10);
 		//redraw path
 		path.attr("d", arc)
 			.attr("transform","translate(" + width/2 + "," + height/2 + ")");
