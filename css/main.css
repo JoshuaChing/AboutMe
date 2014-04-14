@@ -1,5 +1,5 @@
 html{
-	background-color:#f4f7f7;;
+	background-color:#FFF;
 	font-family:Verdana;
 	min-width:320px;
 }
@@ -8,6 +8,10 @@ body{
 	margin:0;
 	padding:0;
 	text-align:center;
+}
+
+.fa{
+	color:#2c3e50;
 }
 
 #header{
@@ -25,7 +29,8 @@ body{
 #footer{
 	font-size:12px;
 	background-color:#bdc3c7;
-	padding:20px;	
+	padding:20px;
+	color:#2c3e50;
 }
 
 .contentDivider{
@@ -118,10 +123,12 @@ nav ul li ul li a:hover{
 
 #bannerName{
 	font-size:50px;
+	color:#2c3e50
 }
 
 #bannerPosition{
-	font-size:20px;
+	font-size:25px;
+	color:#2c3e50
 }
 
 #bannerLogo{
@@ -147,7 +154,7 @@ nav ul li ul li a:hover{
 	text-decoration: none;
 	font-weight:bold;
 	font-size:12px;
-	color:#000;
+	color:#2c3e50
 }
 
 .moreLinksStyle:hover{
@@ -157,7 +164,7 @@ nav ul li ul li a:hover{
 /*GRAPH AND CONTENT CONTAINER*/
 #mainContainer{
 	width:100%;
-	max-width:960px;
+	max-width:1024px;
 	margin:32px auto 32px auto;
 	background-color:#FFF;
 	display:inline-block;
@@ -171,16 +178,35 @@ nav ul li ul li a:hover{
 
 #svg_graph{
 	float:left;
-	margin-bottom:10px;
-	margin-right:10px;
 }
 
 #contentOuterContainer{
-	padding:0 10px 10px 10px;
+	padding: 10px;
+	margin-left:460px;
 }
 
 #contentInnerContainer{
 	text-align:left;
+}
+
+h2{
+	margin:0;
+	padding:0;
+	font-size:20px;
+	color:#2c3e50;
+}
+
+h3{
+	font-size:16px;
+	color:#2c3e50;
+}
+
+p{
+	font-size:12px;
+}
+
+.contentDescription li{
+	font-size:12px;
 }
 
 /*Hide content*/
@@ -196,14 +222,27 @@ nav ul li ul li a:hover{
 	display:none;
 }
 
-/*MOBILE STYLES*/
+/*IPAD STYLES*/
 
+@media only screen and (max-width: 767px) {
+	#svg_graph{
+		float:none;
+	}
+	#contentOuterContainer{
+		margin-left:0px;
+	}
+
+}
+/*MOBILE STYLES*/
 @media only screen and (max-width: 480px) {
+	#bannerContainer{
+		height:320px;
+	}
 	#bannerName{
 		font-size:35px;
 	}
 	#bannerPosition{
-		font-size:18px;
+		font-size:20px;
 	}
 	#bannerLogo{
 		width:30px;
@@ -214,9 +253,11 @@ nav ul li ul li a:hover{
 	}
 	#svg_graph{
 		float:none;
-		margin-bottom:0px;
+	}
+	#contentOuterContainer{
 		margin-left:0px;
 	}
+
 }
 
 /*colors

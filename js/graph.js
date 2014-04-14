@@ -31,7 +31,7 @@ var arc = d3.svg.arc()
 //set up svg space
 var vis = d3.select("#svg_graph")
 	.style("width",width+"px")
-	.style("height", height+"px")
+	.style("height", height+"px");
 
 //draw initial donut path
 var path = vis.selectAll("path")
@@ -49,7 +49,10 @@ var path = vis.selectAll("path")
 var label = vis.append("text")
 	.attr("transform","translate(" + width/2 + "," + height/2 + ")")
 	.attr("text-anchor","middle")
-	.text(about.label);
+	.text(about.label)
+	.style("font-family","verdana")
+  	.style("font-size","20px")
+  	.style("fill","#2c3e50");
 
 $(document).ready(function(){
 	//button function calls on click
@@ -70,7 +73,7 @@ $(document).ready(function(){
 	});
 	$("#skillsButton").click(function(){
 		updateGraph(skills);
-		updateContentTitle("Hard Skills")
+		updateContentTitle("Skills")
 		updateInnerContent("skills");
 	});
 
@@ -124,7 +127,11 @@ function arcTween(a) {
 
 //update content title
 function updateContentTitle(newContentTitle){
-	$("#contentTitle").text(newContentTitle);
+	if (($("#contentTitle").text())!=newContentTitle){
+		$("#contentTitle").hide();
+		$("#contentTitle").text(newContentTitle);
+		$("#contentTitle").fadeIn();
+	}
 }
 
 //update inner content
