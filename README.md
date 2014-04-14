@@ -7,6 +7,7 @@ This is my personal website responsively designed and developed during the train
 A preview of the website can be found below:
 
 http://htmlpreview.github.io/?https://github.com/JoshuaChing/AboutMe/blob/master/index.html
-(Thanks htmlpreview for making such an awesome tool)
+
+Thanks htmlpreview for making such an awesome tool.
 
 Enjoy!
