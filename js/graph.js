@@ -8,6 +8,8 @@ var contentDisplayed = "about";
 var width;
 var height;
 
+//if screen is greater than 768px svg is 460x460
+//otherwise it will be 320x320
 if ($(window).width() > 768){
 	width = 460;
 	height = 460;
@@ -78,6 +80,8 @@ $(document).ready(function(){
 	});
 
 	//check if window size change
+	//if window is greater than 768px svg will be 480x480
+	//otherwise it will be 320x320
 	$(window).resize(function(){
 		if (window.innerWidth<=768){
 			width = 320;

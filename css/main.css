@@ -122,13 +122,15 @@ nav ul li ul li a:hover{
 }
 
 #bannerName{
-	font-size:50px;
+	font-weight:bold;
+	font-size:55px;
 	color:#2c3e50;
 	font-family:'Raleway',Verdana;
 }
 
-#bannerPosition{
-	font-size:27px;
+#bannerPhrase{
+	font-weight:bold;
+	font-size:30px;
 	color:#2c3e50;
 	font-family:'Raleway',Verdana;
 }
@@ -156,7 +158,7 @@ nav ul li ul li a:hover{
 	text-decoration: none;
 	font-weight:bold;
 	font-size:14px;
-	color:#2c3e50
+	color:#2c3e50;
 }
 
 .moreLinksStyle:hover{
@@ -193,6 +195,10 @@ nav ul li ul li a:hover{
       -ms-transition: all 0.3s ease-out;  /* IE10 */
        -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
           transition: all 0.3s ease-out;
+}
+
+.graphButton .fa{
+	color:#FFF;
 }
 
 .graphButton:hover{
@@ -272,7 +278,7 @@ p{
 	#bannerName{
 		font-size:35px;
 	}
-	#bannerPosition{
+	#bannerPhrase{
 		font-size:22px;
 	}
 	#bannerLogo{
