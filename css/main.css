@@ -167,7 +167,7 @@ nav ul li ul li a:hover{
 #mainContainer{
 	width:100%;
 	max-width:1024px;
-	margin:32px auto 32px auto;
+	margin:64px auto 64px auto;
 	background-color:#f4f7f7;
 	display:inline-block;
 }
@@ -176,6 +176,31 @@ nav ul li ul li a:hover{
 	padding-top:10px;
 	padding-bottom:10px;
 	width:100%;
+}
+
+.graphButton{
+	background-color:#2c3e50;
+	font-weight:bold;
+	font-size:14px;
+	color:#FFF;
+	padding:10px 0px;
+	width:140px;
+	margin:0px 20px 20px 20px;
+	border-radius:5px;
+	border:0px;
+	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+      -ms-transition: all 0.3s ease-out;  /* IE10 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;
+}
+
+.graphButton:hover{
+	background-color:#42a1d9;
+}
+
+.graphButton:focus{
+	outline:0;
 }
 
 #svg_graph{
