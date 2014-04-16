@@ -41,7 +41,7 @@ var path = vis.selectAll("path")
 			.attr("d",arc)
 			.attr("transform","translate(" + width/2 + "," + height/2 + ")")
 			.style("fill", function(d, i){return color(i);})
-			.style("stroke","#FFF")
+			.style("stroke","#f4f7f7")
 			.style("stroke-width","3px")
 			.each(function(d) { this._current = d; }); // store the initial angles;
 
@@ -51,7 +51,7 @@ var label = vis.append("text")
 	.attr("text-anchor","middle")
 	.text(about.label)
 	.style("font-family","verdana")
-  	.style("font-size","20px")
+  	.style("font-size","22px")
   	.style("fill","#2c3e50");
 
 $(document).ready(function(){
