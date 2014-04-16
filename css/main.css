@@ -226,15 +226,22 @@ p{
 
 /*IPAD STYLES*/
 
-@media only screen and (max-width: 767px) {
-	#svg_graph{
-		float:none;
+@media only screen and (max-width: 768px) {
+	#contentOuterContainer{
+		margin-left:320px;
 	}
+}
+
+/*JUST FOR KICKS???*/
+@media only screen and (max-width: 640px) {
 	#contentOuterContainer{
 		margin-left:0px;
 	}
-
+	#svg_graph{
+		float:none;
+	}
 }
+
 /*MOBILE STYLES*/
 @media only screen and (max-width: 480px) {
 	#bannerName{

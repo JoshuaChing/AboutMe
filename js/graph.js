@@ -8,7 +8,7 @@ var contentDisplayed = "about";
 var width;
 var height;
 
-if ($(window).width() > 480){
+if ($(window).width() > 768){
 	width = 460;
 	height = 460;
 }
@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 	//check if window size change
 	$(window).resize(function(){
-		if (window.innerWidth<=480){
+		if (window.innerWidth<=768){
 			width = 320;
 			height = 320;
 		}
