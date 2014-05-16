@@ -201,7 +201,7 @@ nav ul li ul li a:hover{
 #mainContainer{
 	width:100%;
 	max-width:1200px;
-	margin:64px auto 64px auto;
+	margin:128px auto 128px auto;
 	display:inline-block;
 }
 
@@ -313,7 +313,7 @@ p{
 	/*reduce graph buttons width*/
 	.graphButton{
 		width:120px;
-		margin:0px 10px 10px 10px;
+		margin:20px 10px 10px 10px;
 	}
 }
 
@@ -330,7 +330,7 @@ p{
 	/*reduce graph buttons width*/
 	.graphButton{
 		width:100px;
-		margin:0px 5px 5px 5px;
+		margin:20px 5px 5px 5px;
 	}
 }
 
@@ -362,11 +362,12 @@ p{
 	/*widden graph buttons width*/
 	.graphButton{
 		float:none;
-		width:40%;
+		width:47%;
+		margin:5px 0px 0px 0px;
 	}
 	/*reduce margin of content container*/
 	#mainContainer{
-		margin:16px auto 16px auto;
+		margin:64px auto 64px auto;
 	}
 
 }
