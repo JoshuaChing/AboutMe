@@ -1,7 +1,7 @@
-var about = {label: "About", dataset: [10,20,30,40]},
-	education = {label: "Education", dataset:[2,12,0,0]},
+var about = {label: "This is me", dataset: [10,20,30,40]},
+	education = {label: "15% Completed", dataset:[2,12,0,0]},
 	experience = {label: "Experience", dataset:[1,0,0,0]},
-	skills = {label: "Skills", dataset: [10,10,10,0]};
+	skills = {label: "Languages", dataset: [10,10,10,0]};
 
 var contentDisplayed = "about";
 
@@ -53,28 +53,28 @@ var label = vis.append("text")
 	.attr("text-anchor","middle")
 	.text(about.label)
   	.style("font-size","22px")
-  	.style("fill","#2c3e50");
+  	.style("fill","#2980b9");
 
 $(document).ready(function(){
 	//button function calls on click
 	$("#aboutButton").click(function(){
 		updateGraph(about);
-		updateContentTitle("About Me");
+		updateContentTitle("I love to learn, take on challenges, and have a good laugh.");
 		updateInnerContent("about");
 	});
 	$("#educationButton").click(function(){
 		updateGraph(education);
-		updateContentTitle("Education");
+		updateContentTitle("Currently studying:");
 		updateInnerContent("education");
 	});
 	$("#experienceButton").click(function(){
 		updateGraph(experience);
-		updateContentTitle("Experience");
+		updateContentTitle("Past Experiences:");
 		updateInnerContent("experience");
 	});
 	$("#skillsButton").click(function(){
 		updateGraph(skills);
-		updateContentTitle("Skills")
+		updateContentTitle("I code while drinking chocolate milk.")
 		updateInnerContent("skills");
 	});
 
