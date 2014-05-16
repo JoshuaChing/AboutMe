@@ -201,7 +201,7 @@ nav ul li ul li a:hover{
 #mainContainer{
 	width:100%;
 	max-width:1200px;
-	margin:64px auto 64px auto;
+	margin:64px auto 80px auto;
 	display:inline-block;
 }
 
@@ -247,7 +247,6 @@ nav ul li ul li a:hover{
 
 #contentOuterContainer{
 	padding: 10px;
-	/*margin-left:460px;*/
 }
 
 #contentInnerContainer{
@@ -298,11 +297,16 @@ p{
 	display:none;
 }
 
-/*jPlayer container*/
+/*projects container*/
 #projectsContainer{
 	background-color:#DEEDF0;
 	padding-top:64px;
-	padding-bottom:64px;
+	padding-bottom:80px;
+}
+
+.jPlayerImg{
+    width:45%;
+    max-width:275px
 }
 
 /*contact container*/
@@ -313,10 +317,6 @@ p{
 /*IPAD STYLES*/
 
 @media only screen and (max-width: 768px) {
-	/*Re adjust content margin change*/
-	#contentOuterContainer{
-		/*margin-left:320px;*/
-	}
 	/*reduce graph buttons width*/
 	.graphButton{
 		width:120px;
@@ -326,14 +326,6 @@ p{
 
 /*JUST FOR KICKS???*/
 @media only screen and (max-width: 640px) {
-	/*remove margin because content sits below graph*/
-	#contentOuterContainer{
-		/*margin-left:0px;*/
-	}
-	/*center svg graph*/
-	#svg_graph{
-		float:none;
-	}
 	/*reduce graph buttons width*/
 	.graphButton{
 		width:100px;
@@ -358,25 +350,12 @@ p{
 	#moreLinksContainer{
 		width:100%;
 	}
-	/*center svg graph*/
-	#svg_graph{
-		float:none;
-	}
-	/*remove margin because content sits below graph*/
-	#contentOuterContainer{
-		/*margin-left:0px;*/
-	}
 	/*widden graph buttons width*/
 	.graphButton{
 		float:none;
 		width:47%;
 		margin:5px 0px 0px 0px;
 	}
-	/*reduce margin of content container*/
-	/*#mainContainer{
-		margin:64px auto 64px auto;
-	}*/
-
 }
 
 /*colors
