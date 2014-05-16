@@ -288,6 +288,20 @@ p{
 	display:none;
 }
 
+/*jPlayer container*/
+#jPlayerContainer{
+	height:100%;
+	width:100%;
+	background-color:#DEEDF0;
+}
+
+/*contact container*/
+#contactContainer{
+	height:100%;
+	width:100%;
+	background-color:#ecf0f1;
+}
+
 /*IPAD STYLES*/
 
 @media only screen and (max-width: 768px) {
@@ -347,11 +361,11 @@ p{
 	/*widden graph buttons width*/
 	.graphButton{
 		float:none;
-		width:97%;
+		width:40%;
 	}
 	/*reduce margin of content container*/
 	#mainContainer{
-	margin:16px auto 16px auto;
+		margin:16px auto 16px auto;
 	}
 
 }
