@@ -218,7 +218,7 @@ nav ul li ul li a:hover{
 	color:#FFF;
 	padding:10px 0px;
 	width:140px;
-	margin:0px 20px 20px 20px;
+	margin:20px;
 	border-radius:5px;
 	border:0px;
 	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
@@ -241,12 +241,13 @@ nav ul li ul li a:hover{
 }
 
 #svg_graph{
-	float:left;
+	/*float:left;*/
+	float:none;
 }
 
 #contentOuterContainer{
 	padding: 10px;
-	margin-left:460px;
+	/*margin-left:460px;*/
 }
 
 #contentInnerContainer{
@@ -307,7 +308,7 @@ p{
 @media only screen and (max-width: 768px) {
 	/*Re adjust content margin change*/
 	#contentOuterContainer{
-		margin-left:320px;
+		/*margin-left:320px;*/
 	}
 	/*reduce graph buttons width*/
 	.graphButton{
@@ -320,7 +321,7 @@ p{
 @media only screen and (max-width: 640px) {
 	/*remove margin because content sits below graph*/
 	#contentOuterContainer{
-		margin-left:0px;
+		/*margin-left:0px;*/
 	}
 	/*center svg graph*/
 	#svg_graph{
@@ -356,7 +357,7 @@ p{
 	}
 	/*remove margin because content sits below graph*/
 	#contentOuterContainer{
-		margin-left:0px;
+		/*margin-left:0px;*/
 	}
 	/*widden graph buttons width*/
 	.graphButton{
