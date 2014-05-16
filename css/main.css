@@ -201,7 +201,7 @@ nav ul li ul li a:hover{
 #mainContainer{
 	width:100%;
 	max-width:1200px;
-	margin:128px auto 128px auto;
+	margin:32px auto 64px auto;
 	display:inline-block;
 }
 
@@ -254,6 +254,14 @@ nav ul li ul li a:hover{
 	text-align:center;
 }
 
+h1{
+	text-align:center;
+	font-weight:bold;
+	font-size:35px;
+	color:#2c3e50;
+	font-family:'Raleway',Verdana;
+}
+
 h2{
 	font-weight:normal;
 	margin:0;
@@ -270,6 +278,7 @@ h3{
 
 p{
 	font-size:14px;
+	color:#2c3e50;
 }
 
 .contentDescription li{
@@ -290,10 +299,10 @@ p{
 }
 
 /*jPlayer container*/
-#jPlayerContainer{
-	height:100%;
-	width:100%;
+#projectsContainer{
 	background-color:#DEEDF0;
+	padding-top:5px;
+	padding-bottom:5px;
 }
 
 /*contact container*/
