@@ -1,7 +1,7 @@
-var about = {label: "This is me", dataset: [10,20,30,40]},
-	education = {label: "15% Completed", dataset:[15,85,0,0]},
-	experience = {label: "100% Dedicated", dataset:[1,0,0,0]},
-	skills = {label: "Languages", dataset: [10,10,10,0]};
+var about = {label: "This is me", dataset: [10,20,30,40, 0]},
+	education = {label: "15% Completed", dataset:[15,85,0,0,0]},
+	experience = {label: "100% Dedicated", dataset:[1,0,0,0,0]},
+	skills = {label: "Java - C++ - HTML - CSS - JS", dataset: [0,1,1,1,0]};
 
 var contentDisplayed = "about";
 
