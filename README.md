@@ -6,6 +6,6 @@ This is my personal website responsively designed and developed during the train
 
 A preview of the website can be found below:
 
-http://csclub.uwaterloo.ca/~jyching/me/
+http://csclub.uwaterloo.ca/~jyching/
 
 Enjoy!
