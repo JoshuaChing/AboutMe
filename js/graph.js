@@ -5,7 +5,7 @@ var about = {label: "This is me", dataset: [1,2,3,4,0,0]},
 
 var aboutLabels = ['Sleep','Dance','Imagine','Create',''],
 	educationLabels = ['','Human Factors','Problem Analysis','Design Process',''],
-	experienceLabels = ['','','Web Dev','Android Dev',''],
+	experienceLabels = ['','','Android Dev','Web Dev',''],
 	skillsLabels = ['C++','Android','HTML-CSS-JS','Java'];
 
 var contentDisplayed = "about";
