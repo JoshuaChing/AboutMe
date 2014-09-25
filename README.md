@@ -1,11 +1,10 @@
-About Me
+joshuaching.github.io
 ==================
 
-This is my personal website responsively designed and developed during the train rides home from my first co-op job.
-(It is still under construction!)
+This is my personal website responsively designed and developed by me!
 
 A preview of the website can be found below:
 
-http://csclub.uwaterloo.ca/~jyching/
+joshuaching.github.io
 
 Enjoy!
