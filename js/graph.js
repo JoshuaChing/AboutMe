@@ -1,7 +1,12 @@
-var about = {label: "This is me", dataset: [10,20,30,40, 0]},
-	education = {label: "15% Completed", dataset:[15,85,0,0,0]},
-	experience = {label: "100% Dedicated", dataset:[1,0,0,0,0]},
-	skills = {label: "Java - C++ - HTML - CSS - JS", dataset: [0,1,1,1,0]};
+var about = {label: "This is me", dataset: [1,2,3,4,0,0]},
+	education = {label: "What I Study", dataset:[0,1,1,1,0,0]},
+	experience = {label: "What I do", dataset:[0,0,1,1,0,0]},
+	skills = {label: "What I know", dataset: [1,2,2,2,0,0]};
+
+var aboutLabels = ['Sleep','Dance','Imagine','Create',''],
+	educationLabels = ['','Human Factors','Problem Analysis','Design Process',''],
+	experienceLabels = ['','','Web Dev','Android Dev',''],
+	skillsLabels = ['C++','Android','HTML-CSS-JS','Java'];
 
 var contentDisplayed = "about";
 
@@ -28,7 +33,7 @@ var pie = d3.layout.pie()
 
 var arc = d3.svg.arc()
 	.innerRadius(radius-70)
-	.outerRadius(radius-10);
+	.outerRadius(radius-20);
 
 //set up svg space
 var vis = d3.select("#svg_graph")
@@ -55,26 +60,41 @@ var label = vis.append("text")
   	.style("font-size","22px")
   	.style("fill","#2980b9");
 
+//draw slice labels
+var label_group = vis.append("svg:g")
+    .attr("class", "labelGroup")
+    .attr("transform", "translate(" + (width/2) + "," + (height/2) + ")");
+
+var sliceLabel = label_group.selectAll("text")
+    .data(pie(about.dataset));
+	sliceLabel.enter().append("svg:text")
+	.style("font-size","14px")
+  	.style("fill","#2c3e50")
+    .attr("class", "arcLabel")
+    .attr("transform", function(d) {return "translate(" + arc.centroid(d) + ")"; })
+    .attr("text-anchor", "middle")
+    .text(function(d, i) {return aboutLabels[i]; });
+
 $(document).ready(function(){
 	//button function calls on click
 	$("#aboutButton").click(function(){
-		updateGraph(about);
+		updateGraph(about,aboutLabels);
 		updateContentTitle("I love to learn, take on challenges, and have a good laugh.");
 		updateInnerContent("about");
 	});
 	$("#educationButton").click(function(){
-		updateGraph(education);
+		updateGraph(education,educationLabels);
 		updateContentTitle("Currently studying:");
 		updateInnerContent("education");
 	});
 	$("#experienceButton").click(function(){
-		updateGraph(experience);
-		updateContentTitle("Past Experiences:");
+		updateGraph(experience,experienceLabels);
+		updateContentTitle("Experiences:");
 		updateInnerContent("experience");
 	});
 	$("#skillsButton").click(function(){
-		updateGraph(skills);
-		updateContentTitle("I code while drinking chocolate milk.")
+		updateGraph(skills,skillsLabels);
+		updateContentTitle("I code best with chocolate milk.")
 		updateInnerContent("skills");
 	});
 
@@ -96,17 +116,21 @@ $(document).ready(function(){
 		//resize radius size
 		radius = Math.min(width, height) / 2;
 		arc.innerRadius(radius-70)
-			.outerRadius(radius-10);
+			.outerRadius(radius-20);
 		//redraw path
 		path.attr("d", arc)
 			.attr("transform","translate(" + width/2 + "," + height/2 + ")");
 		//redraw label
-		label.attr("transform","translate(" + width/2 + "," + height/2 + ")")
+		label.attr("transform","translate(" + width/2 + "," + height/2 + ")");
+		//redraw slice labels
+		label_group.attr("transform","translate(" + width/2 + "," + height/2 + ")");
+		sliceLabel.attr("transform", function(d) {return "translate(" + arc.centroid(d) + ")"; })
+  
 	});
 });
 
 //update graph function
-function updateGraph(dataObject){
+function updateGraph(dataObject, dataLabels){
 	//update paths
 	path.data(pie(dataObject.dataset))
 		.transition()
@@ -116,6 +140,13 @@ function updateGraph(dataObject){
 
 	//update center label
 	label.text(dataObject.label);
+
+	//update slice labels
+	sliceLabel.data(pie(dataObject.dataset));
+    sliceLabel.transition().ease("bounce").duration(750)
+        .attr("transform", function(d) {return "translate(" + arc.centroid(d) + ")"; })
+        .text(function(d, i) {return dataLabels[i]; })
+        .style("fill-opacity", function(d) {return d.value==0 ? 1e-6 : 1;});
 }
 
 // Store the currently-displayed angles in this._current.
