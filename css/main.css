@@ -356,6 +356,26 @@ p{
 		width:120px;
 		margin:20px 10px 10px 10px;
 	}
+
+	/*change regular text to font 14px*/
+	#footer{
+		font-size:14px;
+	}
+	.moreLinksStyle{
+		font-size:14px;
+	}
+	h3{
+		font-size:14px;
+	}
+	p{
+		font-size:14px;
+	}
+	.projectTag{
+		font-size:14px;
+	}
+	.contentDescription li{
+		font-size:14px;
+	}
 }
 
 /*JUST FOR KICKS???*/
