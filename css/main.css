@@ -29,6 +29,21 @@ body{
 	z-index: 1;
 	margin:0;
 	padding:0;
+	opacity: 0.60;
+	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+      -ms-transition: all 0.3s ease-out;  /* IE10 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;
+}
+
+#header:hover{
+	opacity: 1.0;
+	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+      -ms-transition: all 0.3s ease-out;  /* IE10 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;
 }
 
 #footer{
@@ -83,7 +98,7 @@ nav ul li{
 /*all list item links*/
 nav ul li a{
 	text-decoration:none;
-	font-size: 18px;
+	font-size: 14px;
 	color:#FFF;
 	border-bottom: 1px solid rgba(255,255,255,0);
 	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
