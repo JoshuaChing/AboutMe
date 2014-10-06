@@ -193,7 +193,7 @@ nav ul li ul li a:hover{
 /*MORE LINKS*/
 
 #moreLinksContainer{
-	width:60%;
+	width:40%;
 	padding-top:80px;
 	margin: 0 auto;
 	display:inline-block;
@@ -218,6 +218,79 @@ nav ul li ul li a:hover{
 
 .moreLinksStyle:hover{
 	border-color: #2c3e50;
+}
+
+.hoverButtonBlock{
+	width:50%;
+	float:left;
+}
+
+.hoverButtonLink{
+	display:inline-block;
+	font-size:18px;
+	color: #FFFFFF;
+	background: #2c3e50;
+	border: 1px solid #2c3e50;
+	width: 160px;
+	height: 25px;
+	padding: 10px 0px;
+	/*position: absolute;
+  	top:0; right:0; bottom:0; left:0;*/
+	text-decoration:none;
+	text-align:center;
+	overflow:hidden;
+	letter-spacing:2px;
+
+	transition:all 0.5s;
+}
+
+.hoverButtonLink:hover, .hoverButtonLink:active{
+	text-decoration:none;
+	color:#2c3e50;
+	border-color:#2c3e50;
+	background:none;
+}
+
+.hoverButtonLink span{
+	display: inline-block;
+  	position: relative;
+	padding-right: 0;
+
+  	transition: padding-right 0.5s;
+}
+
+.hoverButtonLink span:after 
+{
+  	content: '';  
+ 	position: absolute;
+ 	right: -10px;
+ 	opacity: 0;
+  	width: 10px;
+  	height: 10px;
+  	margin-top:6px;
+
+  	background: rgba(0, 0, 0, 0);
+  	border: 2px solid #2c3e50;
+  	border-top:none;
+  	border-left:none;
+  
+  	transition: opacity 0.5s, right 0.5s;
+  	transform: rotate(-45deg);
+}
+
+.hoverButtonLink:hover span, .button:active span 
+{
+  	padding-right: 15px;
+}
+
+.hoverButtonLink:hover span:after, .button:active span:after 
+{
+  	opacity: 1;
+  	border-color:#2c3e50;
+  	right: -15;
+
+  	transform: rotate(-45deg);
+  	transition: opacity 0.5s, right 0.5s;
 }
 
 /*GRAPH AND CONTENT CONTAINER*/
