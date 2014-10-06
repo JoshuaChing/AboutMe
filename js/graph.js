@@ -1,9 +1,9 @@
-var about = {label: "This is me", dataset: [1,2,3,4,0,0]},
+var about = {label: "This is me", dataset: [1,1,3,4,0,0]},
 	education = {label: "What I Study", dataset:[0,1,1,1,0,0]},
 	experience = {label: "What I do", dataset:[0,0,1,1,0,0]},
-	skills = {label: "What I know", dataset: [1,2,2,2,0,0]};
+	skills = {label: "What I know", dataset: [1,3,3,3,0,0]};
 
-var aboutLabels = ['Sleep','Dance','Imagine','Create',''],
+var aboutLabels = ['Sleep','Eat','Explore','Create',''],
 	educationLabels = ['','Human Factors','Problem Analysis','Design Process',''],
 	experienceLabels = ['','','Android Dev','Web Dev',''],
 	skillsLabels = ['C++','Android','HTML-CSS-JS','Java'];
