@@ -370,12 +370,6 @@ h2{
 	color:#2c3e50;
 }
 
-h3{
-	font-weight:normal;
-	font-size:18px;
-	color:#2c3e50;
-}
-
 p{
 	font-size:18px;
 	color:#2c3e50;
@@ -420,6 +414,8 @@ p{
 /*contact container*/
 #contactContainer{
 	background-color:#ecf0f1;
+	padding-top:64px;
+	padding-bottom:80px;
 }
 
 /*IPAD STYLES*/
