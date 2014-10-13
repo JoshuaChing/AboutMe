@@ -475,6 +475,10 @@ p{
 		font-size: 35px;
 		letter-spacing:4px;
 	}
+	#bannerLogo{
+		margin-bottom:12px;
+		margin-right:14px;
+	}
 }
 
 /*IPAD STYLES*/
