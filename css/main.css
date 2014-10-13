@@ -543,6 +543,12 @@ p{
 		width:47%;
 		margin:5px 0px 0px 0px;
 	}
+	.hoverButtonLink{
+		font-size:16px;
+	}
+	.hoverButtonLink span:after {
+		margin-top:5px;
+	}
 }
 
 /*colors
