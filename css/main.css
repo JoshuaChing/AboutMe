@@ -195,7 +195,8 @@ nav ul li ul li a:hover{
 /*MORE LINKS AND HOVER BUTTON*/
 
 #moreLinksContainer{
-	width:40%;
+	width:60%;
+	max-width:500px;
 	padding-top:80px;
 	margin: 0 auto;
 	display:inline-block;
@@ -481,6 +482,12 @@ p{
 	.moreLinksStyle{
 		font-size:14px;
 	}
+	.hoverButtonLink{
+		width:140px;
+	}
+	#moreLinksContainer{
+		width:70%;
+	}
 	h3{
 		font-size:14px;
 	}
@@ -507,6 +514,9 @@ p{
 	.graphButton{
 		width:100px;
 		margin:20px 5px 5px 5px;
+	}
+	#moreLinksContainer{
+		width:85%;
 	}
 }
 
