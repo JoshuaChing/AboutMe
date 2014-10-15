@@ -156,7 +156,7 @@ nav ul li ul li a:hover{
 	width:100%;
 	height:100%;/*height:460px;*/
 	min-height:360px;
-	background:url("../img/banner7.png") no-repeat center top;
+	background:url("../img/setup.jpg") no-repeat center top;
 	background-size:cover;
 	position:fixed;
 	z-index:-99;
