@@ -160,6 +160,7 @@ nav ul li ul li a:hover{
 	background-size:cover;
 	position:fixed;
 	z-index:-99;
+	opacity:0.2;
 }
 
 #bannerContainer{
@@ -321,7 +322,7 @@ nav ul li ul li a:hover{
 	padding:10px 0px;
 	width:145px;
 	margin:20px;
-	border-radius:5px;
+	/*border-radius:5px;*/
 	border:0px;
 	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
      -moz-transition: all 0.3s ease-out;  /* FF4+ */
