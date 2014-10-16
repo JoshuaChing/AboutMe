@@ -407,7 +407,7 @@ p{
 #projectsContainer{
 	background-color:#DEEDF0;
 	padding-top:64px;
-	padding-bottom:80px;
+	padding-bottom:80px
 }
 
 .jPlayerImg{
@@ -425,8 +425,8 @@ p{
 /*CONTACT CONTAINER*/
 #contactContainer{
 	background-color:#ecf0f1;
-	padding-top:64px;
-	padding-bottom:100px;
+	padding-top:96px;
+	padding-bottom:132px;
 }
 
 #contactInfoBlock{
@@ -584,4 +584,6 @@ p{
 	blue:#42a1d9;
 	lightlightlightgray:#f4f7f7;
 	navy blue:#2c3e50;
+	lightlightlightblue:#DEEDF0;
+	lightBlue: #C6DBEF;
 */
