@@ -160,7 +160,16 @@ nav ul li ul li a:hover{
 	background-size:cover;
 	position:fixed;
 	z-index:-99;
-	opacity:0.2;
+	opacity:1.0;
+}
+
+#bannerBackgroundCover{
+	width: 100%;
+	height:100%;
+	background: #42a1d9;
+	opacity:0.85;
+	z-index:-98;
+	position:fixed;
 }
 
 #bannerContainer{
@@ -176,14 +185,14 @@ nav ul li ul li a:hover{
 
 #bannerName{
 	font-size:62px;
-	color:#2c3e50;
+	color:#FFFFFF;
 	font-family:'Raleway',Verdana;
 	letter-spacing:4px;
 }
 
 #bannerPhrase{
 	font-size:34px;
-	color:#2c3e50;
+	color:#FFFFFF;
 	font-family:'Raleway',Verdana;
 	letter-spacing:2px;
 }
@@ -574,4 +583,5 @@ p{
 	turquoise:#00d0af;
 	blue:#42a1d9;
 	lightlightlightgray:#f4f7f7;
+	navy blue:#2c3e50;
 */
