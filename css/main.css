@@ -29,7 +29,7 @@ body{
 	z-index: 1;
 	margin:0;
 	padding:0;
-	opacity: 0.70;
+	opacity: 1.0;
 	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
      -moz-transition: all 0.3s ease-out;  /* FF4+ */
       -ms-transition: all 0.3s ease-out;  /* IE10 */
@@ -156,10 +156,20 @@ nav ul li ul li a:hover{
 	width:100%;
 	height:100%;/*height:460px;*/
 	min-height:360px;
-	background:url("../img/banner7.png") no-repeat center top;
+	background:url("../img/setup.jpg") no-repeat center top;
 	background-size:cover;
 	position:fixed;
 	z-index:-99;
+	opacity:1.0;
+}
+
+#bannerBackgroundCover{
+	width: 100%;
+	height:100%;
+	background: #42a1d9;
+	opacity:0.85;
+	z-index:-98;
+	position:fixed;
 }
 
 #bannerContainer{
@@ -174,15 +184,17 @@ nav ul li ul li a:hover{
 }
 
 #bannerName{
-	font-size:54px;
-	color:#2c3e50;
+	font-size:66px;
+	color:#FFFFFF;
 	font-family:'Raleway',Verdana;
+	letter-spacing:4px;
 }
 
 #bannerPhrase{
-	font-size:30px;
-	color:#2c3e50;
+	font-size:38px;
+	color:#FFFFFF;
 	font-family:'Raleway',Verdana;
+	letter-spacing:2px;
 }
 
 #bannerLogo{
@@ -190,10 +202,11 @@ nav ul li ul li a:hover{
 	margin-right:10px;
 }
 
-/*MORE LINKS*/
+/*MORE LINKS AND HOVER BUTTON*/
 
 #moreLinksContainer{
 	width:60%;
+	max-width:500px;
 	padding-top:80px;
 	margin: 0 auto;
 	display:inline-block;
@@ -218,6 +231,79 @@ nav ul li ul li a:hover{
 
 .moreLinksStyle:hover{
 	border-color: #2c3e50;
+}
+
+.hoverButtonBlock{
+	width:50%;
+	float:left;
+}
+
+.hoverButtonLink{
+	display:inline-block;
+	font-size:18px;
+	color: #FFFFFF;
+	background: #2c3e50;
+	border: 1px solid #2c3e50;
+	width: 160px;
+	height: 25px;
+	padding: 10px 0px;
+	/*position: absolute;
+  	top:0; right:0; bottom:0; left:0;*/
+	text-decoration:none;
+	text-align:center;
+	overflow:hidden;
+	letter-spacing:2px;
+
+	transition:all 0.5s;
+}
+
+.hoverButtonLink:hover, .hoverButtonLink:active{
+	text-decoration:none;
+	color:#FFFFFF;
+	border-color:#FFFFFF;
+	background:none;
+}
+
+.hoverButtonLink span{
+	display: inline-block;
+  	position: relative;
+	padding-right: 0;
+
+  	transition: padding-right 0.5s;
+}
+
+.hoverButtonLink span:after 
+{
+  	content: '';  
+ 	position: absolute;
+ 	right: -10px;
+ 	opacity: 0;
+  	width: 10px;
+  	height: 10px;
+  	margin-top:6px;
+
+  	background: rgba(0, 0, 0, 0);
+  	border: 2px solid #FFFFFF;
+  	border-top:none;
+  	border-left:none;
+  
+  	transition: opacity 0.5s, right 0.5s;
+  	transform: rotate(-45deg);
+}
+
+.hoverButtonLink:hover span, .hoverButton:active span 
+{
+  	padding-right: 15px;
+}
+
+.hoverButtonLink:hover span:after, .hoverButton:active span:after 
+{
+  	opacity: 1;
+  	border-color:#FFFFFF;
+  	right: -15;
+
+  	transform: rotate(-45deg);
+  	transition: opacity 0.5s, right 0.5s;
 }
 
 /*GRAPH AND CONTENT CONTAINER*/
@@ -245,7 +331,7 @@ nav ul li ul li a:hover{
 	padding:10px 0px;
 	width:145px;
 	margin:20px;
-	border-radius:5px;
+	/*border-radius:5px;*/
 	border:0px;
 	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
      -moz-transition: all 0.3s ease-out;  /* FF4+ */
@@ -295,22 +381,9 @@ h2{
 	color:#2c3e50;
 }
 
-h3{
-	font-weight:normal;
-	font-size:18px;
-	color:#2c3e50;
-}
-
 p{
 	font-size:18px;
 	color:#2c3e50;
-}
-
-.projectTag{
-	font-size:18px;
-	font-weight:bold;
-	color:#2c3e50;
-	font-family:'Raleway',Verdana;
 }
 
 .contentDescription li{
@@ -330,11 +403,11 @@ p{
 	display:none;
 }
 
-/*projects container*/
+/*PROJECTS CONTAINER*/
 #projectsContainer{
 	background-color:#DEEDF0;
 	padding-top:64px;
-	padding-bottom:80px;
+	padding-bottom:80px
 }
 
 .jPlayerImg{
@@ -342,9 +415,80 @@ p{
     max-width:275px
 }
 
-/*contact container*/
+.projectTag{
+	font-size:18px;
+	font-weight:bold;
+	color:#2c3e50;
+	font-family:'Raleway',Verdana;
+}
+
+/*CONTACT CONTAINER*/
 #contactContainer{
 	background-color:#ecf0f1;
+	padding-top:96px;
+	padding-bottom:132px;
+}
+
+#contactInfoBlock{
+	width:50%;
+	margin: 0 auto;
+	display:inline-block;
+}
+
+/*#contactLeftBlock{
+	width:50%;
+	float:left;
+}
+
+#contactRightblock{
+	width:50%;
+	float:right;
+}*/
+
+.socialLinkBox{
+	margin-right:12px;
+	padding:12px;
+	/*border: 1px solid #2c3e50;*/
+	background-color: #2c3e50;
+	display:inline-block;
+
+	transition:all 0.5s;
+}
+
+.socialLinkBox:hover, .socialLinkBox:active{
+	background: #42a1d9;
+
+	transition:all 0.5s;
+}
+
+.socialLinkBox:hover > .fa, .socialLinkBox:active > .fa{
+	color:#FFFFFF;
+
+	transition:all 0.5s;
+}
+
+.socialLinkBox .fa{
+	color:#FFFFFF;
+
+	transition:all 0.5s;
+}
+
+
+
+/*WIDE SCREENS*/
+@media only screen and (min-width: 1024px){
+	#bannerName{
+		font-size: 84px;
+		letter-spacing:6px;
+	}
+	#bannerPhrase{
+		font-size: 39px;
+		letter-spacing:4px;
+	}
+	#bannerLogo{
+		margin-bottom:12px;
+		margin-right:14px;
+	}
 }
 
 /*IPAD STYLES*/
@@ -364,6 +508,12 @@ p{
 	.moreLinksStyle{
 		font-size:14px;
 	}
+	.hoverButtonLink{
+		width:140px;
+	}
+	#moreLinksContainer{
+		width:70%;
+	}
 	h3{
 		font-size:14px;
 	}
@@ -376,6 +526,14 @@ p{
 	.contentDescription li{
 		font-size:14px;
 	}
+	#bannerName{
+		font-size:58px;
+		letter-spacing:0px;
+	}
+	#bannerPhrase{
+		font-size:34px;
+		letter-spacing:0px;
+	}
 }
 
 /*JUST FOR KICKS???*/
@@ -385,22 +543,25 @@ p{
 		width:100px;
 		margin:20px 5px 5px 5px;
 	}
+	#moreLinksContainer{
+		width:85%;
+	}
 }
 
 /*MOBILE STYLES*/
 @media only screen and (max-width: 480px) {
 	/*Reduce banner text and image sizes*/
 	#bannerName{
-		font-size:35px;
+		font-size:39px;
 	}
 	#bannerPhrase{
-		font-size:22px;
+		font-size:26px;
 	}
 	#bannerLogo{
 		width:30px;
 		height:30px;
 	}
-	/*widen more links container*/
+	/*widden more links container*/
 	#moreLinksContainer{
 		width:100%;
 	}
@@ -410,10 +571,19 @@ p{
 		width:47%;
 		margin:5px 0px 0px 0px;
 	}
+	.hoverButtonLink{
+		font-size:16px;
+	}
+	.hoverButtonLink span:after {
+		margin-top:5px;
+	}
 }
 
 /*colors
 	turquoise:#00d0af;
 	blue:#42a1d9;
 	lightlightlightgray:#f4f7f7;
+	navy blue:#2c3e50;
+	lightlightlightblue:#DEEDF0;
+	lightBlue: #C6DBEF;
 */
