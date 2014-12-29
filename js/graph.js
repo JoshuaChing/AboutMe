@@ -79,7 +79,7 @@ $(document).ready(function(){
 	//button function calls on click
 	$("#aboutButton").click(function(){
 		updateGraph(about,aboutLabels);
-		updateContentTitle("I love to learn, take on challenges, and have a good laugh.");
+		updateContentTitle("I find a thrill in creating things.");
 		updateInnerContent("about");
 	});
 	$("#educationButton").click(function(){
