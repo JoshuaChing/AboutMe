@@ -415,6 +415,11 @@ p{
     max-width:275px
 }
 
+.projectsWebImg{
+    width:80%;
+    max-width:840px;
+}
+
 .projectTag{
 	font-size:18px;
 	font-weight:bold;
