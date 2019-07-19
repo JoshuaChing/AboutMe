@@ -84,7 +84,7 @@ $(document).ready(function(){
 	});
 	$("#educationButton").click(function(){
 		updateGraph(education,educationLabels);
-		updateContentTitle("Currently studying:");
+		updateContentTitle("Completed:");
 		updateInnerContent("education");
 	});
 	$("#experienceButton").click(function(){
